@@ -6,7 +6,7 @@ token = settings.TOKEN
 id = int(settings.ID)
 channel = int(settings.CHANNEL)
 
-@client.event
+@bot.event
 async def on_ready():
     cha = bot.get_channel(channel)
     await cha.send('a', file=discord.File('white.png'))
