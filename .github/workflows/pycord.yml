@@ -4,6 +4,7 @@ on:
 env:  #環境変数から文字列(パスワードなど)を取得
   TOKEN: ${{secrets.TOKEN}}
   ID: ${{secrets.ID}}
+  CHANNEL: ${{secrets.CHANNEL}}
 
 jobs:
   python:
