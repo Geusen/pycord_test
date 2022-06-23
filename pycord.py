@@ -8,10 +8,7 @@ channel = int(settings.CHANNEL)
 
 @bot.slash_command(guild_ids=[id])
 async def upload(ctx):
-    button = discord.ui.Button(label="pong",style=discord.ButtonStyle.green)
-    view=View()
-    view.add_item(button)
-    await ctx.respond('test', file=discord.File('white.png'), view=view)
+    await ctx.channel.respond('test', file=discord.File('white.png'))
     await bot.close()
     exit()
 
