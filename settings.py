@@ -7,3 +7,4 @@ load_dotenv(dotenv_path)
 
 TOKEN = os.environ.get("TOKEN")
 ID = os.environ.get("ID")
+CHANNEL = os.environ.get("CHANNEL")
