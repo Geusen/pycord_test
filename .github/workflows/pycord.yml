@@ -2,8 +2,8 @@ name: GitHub_Actions(pycord)
 on:
   workflow_dispatch:
 env:  #環境変数から文字列(パスワードなど)を取得
-  TOKEN: ${{secrets.DISCORD_TOKEN}}
-  ID: ${{secrets.DISCORD_ID}}
+  TOKEN: ${{secrets.TOKEN}}
+  ID: ${{secrets.ID}}
 
 jobs:
   python:
