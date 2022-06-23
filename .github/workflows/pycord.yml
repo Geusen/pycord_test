@@ -1,0 +1,23 @@
+name: GitHub_Actions(pycord)
+on:
+  workflow_dispatch:
+env:  #環境変数から文字列(パスワードなど)を取得
+  DISCORD_TOKEN: ${{secrets.DISCORD_TOKEN}}
+  DISCORD_ID: ${{secrets.DISCORD_ID}}
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.6.15'
+          architecture: 'x64'
+      - run: |
+          python -m pip install --upgrade pip
+          pip install git+https://github.com/Pycord-Development/pycord
+          python pycord.py
+      - name: Keepalive Workflow
+        uses: gautamkrishnar/keepalive-workflow@1.0.7
