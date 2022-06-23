@@ -6,7 +6,7 @@ token = settings.TOKEN
 id = int(settings.ID)
 
 @bot.slash_command(guild_ids=[id])
-async def ping(channel: bot.get_channel(D_channel)):
+async def ping(channel: bot.get_channel(channel)):
     await channel.send('pong', file=discord.File('white.png'))
     await bot.close()
     exit()
