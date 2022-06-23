@@ -8,5 +8,6 @@ id = int(settings.ID)
 @bot.slash_command(guild_ids=[id])
 async def ping(ctx):
     await ctx.send('pong', file=discord.File('white.png'))
+    exit()
 
 bot.run(token)
