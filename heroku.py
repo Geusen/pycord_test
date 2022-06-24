@@ -6,7 +6,6 @@ from keep_alive import keep_alive
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 
-
 #----------------------------------------------------------------
 #JSONファイル作成
 f = open('credentials.json', 'w')
@@ -72,11 +71,3 @@ async def upload(ctx):
   #Discordで通知
   await ctx.respond('時間割が更新されました。', file=discord.File('upload.png'))
   os.remove('upload.png')
-
-keep_alive()
-try:
-  client.run(Discord_token)
-except discord.errors.HTTPException:
-    print("\n\n\nBLOCKED BY RATE LIMITS\nRESTARTING NOW\n\n\n")
-    os.system("python restarter.py")
-    os.system('kill 1')
