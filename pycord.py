@@ -18,6 +18,7 @@ async def upload(ctx):
     await bot.close()
     exit()
 
+@bot.slash_command(guild_ids=[id])
 async def exit(ctx):
     await bot.close()
     exit()
