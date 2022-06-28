@@ -18,9 +18,10 @@ async def upload(ctx):
     await bot.close()
     exit()
 
-@bot.slash_command(guild_ids=[id], description="test")
+@bot.slash_command(guild_ids=[id], description="退出")
 async def exit(ctx):
     await ctx.respond('exit.')
+    await ctx.message.delete()
     await bot.close()
     exit()
 
