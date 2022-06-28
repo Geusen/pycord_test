@@ -9,7 +9,7 @@ channel = int(settings.CHANNEL)
 @bot.event
 async def on_ready():
     cha = bot.get_channel(channel)
-    await bot.change_presence(activity=discord.Game(name="Test"))
+    await bot.change_presence(activity=discord.Listening(name="Hollow Knight"))
     #await cha.send('a', file=discord.File('white.png'))
 
 @bot.slash_command(guild_ids=[id])
