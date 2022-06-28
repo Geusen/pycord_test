@@ -9,7 +9,8 @@ channel = int(settings.CHANNEL)
 @bot.event
 async def on_ready():
     cha = bot.get_channel(channel)
-    await cha.send('a', file=discord.File('white.png'))
+    await bot.change_presence(activity=discord.Game(name="Test"))
+    #await cha.send('a', file=discord.File('white.png'))
 
 @bot.slash_command(guild_ids=[id])
 async def upload(ctx):
