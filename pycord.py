@@ -18,4 +18,8 @@ async def upload(ctx):
     await bot.close()
     exit()
 
+async def exit(ctx):
+    await bot.close()
+    exit()
+
 bot.run(token)
