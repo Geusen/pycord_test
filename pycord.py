@@ -22,7 +22,7 @@ async def upload(ctx):
 @bot.slash_command(guild_ids=[id], description="退出")
 async def exit(ctx):
     cha = bot.get_channel(channel)
-    await cha.send('a', file=discord.File('white.png'))
+    #await cha.send('a', file=discord.File('white.png'))
     await ctx.respond('exit.')
     #await ctx.respond('exit.', delete_after=1)
     #sleep(3)
